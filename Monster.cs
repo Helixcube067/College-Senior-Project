@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Monster : Interactables
 {
@@ -9,10 +10,19 @@ public class Monster : Interactables
      * 
      */
     public new string name;
-    public float radius = 5f;
-    public int health;
     public int level;
+    public int health;
+    public int atk;
+    public int def;
+    [TextArea(2,5)]
+    public string description;
+    [TextArea(2,5)]
+    public string goofer;
+    public Sprite monsterPic;
+    public float radius = 5f;
     Transform player;
+    public int gold;
+    public int exp;
     //private bool isFocus;
 
     // Start is called before the first frame update
@@ -37,5 +47,19 @@ public class Monster : Interactables
     {
         //isFocus = false;
         player = null;
+    }
+
+    public int TakeDamage(int dmg) {
+        int damage = dmg - def;
+        health -= dmg;
+        return damage;
+    }
+
+    public bool StatusCheck() {
+        //Debug.Log(health);
+        if (health <= 0)
+            return true;
+        else
+            return false;
     }
 }

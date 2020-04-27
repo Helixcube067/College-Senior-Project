@@ -21,7 +21,8 @@ public class Interactables : MonoBehaviour
     {
         
     }
-    private void OnMouseEnter()
+
+    /*private void OnMouseEnter()
     {
        if (pauseMenu.activeInHierarchy == false && dialogMenu.activeInHierarchy == false)
         GetComponent<Renderer>().material.SetColor("_Color", Color.red);
@@ -43,5 +44,5 @@ public class Interactables : MonoBehaviour
     {
         if (pauseMenu.activeInHierarchy == false && dialogMenu.activeInHierarchy == false)
             GetComponent<Renderer>().material.SetColor("_Color", Color.white);
-    }
+    }*/
 }

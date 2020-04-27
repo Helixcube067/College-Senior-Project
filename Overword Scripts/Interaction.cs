@@ -11,9 +11,8 @@ public class Interaction : MonoBehaviour
      */
     PlayerMovement motor;
     Camera cam;
-    public LayerMask movementMask;
     Monster monster;
-
+    public LayerMask movementMask;
     void Start()
     {
         cam = Camera.main;
